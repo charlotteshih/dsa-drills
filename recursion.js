@@ -9,38 +9,37 @@
 // }
 // countingSheep(3)
 
+// const powerCalculator = function (base, exponent) {
+//     if (exponent < 0) {
+//         console.log(`Exponent should be >= 0`)
+//         return
+//     }
+//     if (exponent === 1) {
+//         return base
+//     }
+//     console.log('exp', exponent)
 
-// 2. Power Calculator
-const powerCalculator = function(base, exponent) {
-  if (exponent < 0) {
-    console.log(`Exponent should be >= 0`)
-    return
-  }
-  // for (let i = 1; i <= exponent; i++) {
-  //   console.log(base ** i)
-  // }  
-  let i = 1
-  if (i === exponent) {
-    return
-  }
-  base ** i
-  console.log(powerCalculator(base, i))
-  // console.log(base ** exponent)
-  // console.log(base * powerCalculator(base, exponent - 1))
-}
-powerCalculator(10, 3)
-  // 10
-  // 10 * 10
-  // 10 * 10 * 10
-  // = 1000
-// powerCalculator(10, -2)
+//     return base * powerCalculator(base, exponent - 1)
 
+
+// }
+// console.log(powerCalculator(10, 3))
+// // powerCalculator(10, -3)
 
 // 3. Reverse String
 
+const reverse = function (str) {
+  if (str.length === 0) {
+    return ''
+  }
+  const newChar = str[str.length - 1]
+  console.log('char', newChar)
+  console.log('str', str)
+  return newChar + reverse(str.substring(0, str.length - 1))
+}
+console.log(reverse('cat'))
 
-
-// 4. nth Triangular Number
+    // 4. nth Triangular Number
 
 
 
