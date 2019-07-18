@@ -1,50 +1,59 @@
 // 1. Counting Sheep
-// const countingSheep = function(numSheep) {
-//   if (numSheep === 0) {
-//     console.log(`All sheep jumped over the fence.`)
-//     return
-//   }
-//   console.log(`${numSheep}: Another sheep jumped over the fence.`)
-//   countingSheep(numSheep - 1)
-// }
+const countingSheep = function(numSheep) {
+  if (numSheep === 0) {
+    console.log(`All sheep jumped over the fence.`)
+    return
+  }
+  console.log(`${numSheep}: Another sheep jumped over the fence.`)
+  countingSheep(numSheep - 1)
+}
 // countingSheep(3)
 
-// const powerCalculator = function (base, exponent) {
-//     if (exponent < 0) {
-//         console.log(`Exponent should be >= 0`)
-//         return
-//     }
-//     if (exponent === 1) {
-//         return base
-//     }
-//     console.log('exp', exponent)
-
-//     return base * powerCalculator(base, exponent - 1)
-
-
-// }
+// 2. Power Calculator
+const powerCalculator = function(base, exponent) {
+    if (exponent < 0) {
+      console.log(`Exponent should be >= 0`)
+      return
+    }
+    if (exponent === 1) {
+      return base
+    }
+    return base * powerCalculator(base, exponent - 1)
+}
 // console.log(powerCalculator(10, 3))
-// // powerCalculator(10, -3)
 
 // 3. Reverse String
-
-const reverse = function (str) {
+const reverse = function(str) {
   if (str.length === 0) {
     return ''
   }
-  const newChar = str[str.length - 1]
-  console.log('char', newChar)
-  console.log('str', str)
-  return newChar + reverse(str.substring(0, str.length - 1))
+  const lastLetter = str[str.length - 1]
+  console.log('lastLetter', lastLetter)
+  return lastLetter + reverse(str.substring(0, str.length - 1))
 }
-console.log(reverse('cat'))
+// console.log(reverse('abcdefg'))
 
-    // 4. nth Triangular Number
-
-
+// 4. nth Triangular Number
+const triNum = function(num) {
+  if (num === 0) {
+    return 0
+  }
+  return num + triNum(num - 1)
+}
+// console.log(triNum(4))
 
 // 5. String Splitter
+const strSplit = function(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (i === '/') {
+      return ''
+    }
+    let newStr = ''
+    return newStr.push(str[i])
+  }
+}
 
+// console.log(strSplit('asdf/asdf/asdf'))
 
 
 // 6. Fibonacci
