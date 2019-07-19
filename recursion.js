@@ -31,7 +31,7 @@ const reverse = function(str) {
   console.log('lastLetter', lastLetter)
   return lastLetter + reverse(str.substring(0, str.length - 1))
 }
-// console.log(reverse('abcdefg'))
+// console.log(reverse('cat'))
 
 // 4. nth Triangular Number
 const triNum = function(num) {
