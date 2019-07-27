@@ -57,7 +57,7 @@ function display(stack) {
     return
   }
 
-  // return `First item is ${peep(stack)}`
+  return `First item is ${peep(stack)}`
 }
 
 function main() {
@@ -85,7 +85,7 @@ function isPalindrome(str) {
   //   }
   // }
 
-  // Using stacks
+  // Using stacks:
   let stack1 = new Stack()
   let stack2 = new Stack()
 

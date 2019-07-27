@@ -20,7 +20,7 @@ class LinkedList {
     }
     else {
       let tempNode = this.head
-      while (tempNode.next !== null) {
+      while (tempNode.next != null) {
         tempNode = tempNode.next
       }
       tempNode.next = new _Node(item, null)
@@ -168,21 +168,23 @@ class LinkedList {
   }
 }
 
-function main() {
-  let SLL = new LinkedList()
+// function main() {
+//   let SLL = new LinkedList()
 
-  SLL.insertFirst('Apollo')
-  SLL.insertLast('Boomer')
-  SLL.insertLast('Helo')
-  SLL.insertLast('Husker')
-  SLL.insertLast('Starbuck')
-  SLL.insertLast('Tauhida')
+//   SLL.insertFirst('Apollo')
+//   SLL.insertLast('Boomer')
+//   SLL.insertLast('Helo')
+//   SLL.insertLast('Husker')
+//   SLL.insertLast('Starbuck')
+//   SLL.insertLast('Tauhida')
 
-  SLL.insertBefore('Athena', 'Boomer')
-  SLL.insertAfter('Helo', 'Hotdog')
-  SLL.insertAt('Kat', 3)
+//   SLL.insertBefore('Athena', 'Boomer')
+//   SLL.insertAfter('Helo', 'Hotdog')
+//   SLL.insertAt('Kat', 3)
   
-  return SLL.size()
-}
+//   return SLL.size()
+// }
 
-console.log(main())
+// console.log(main())
+
+module.exports = LinkedList
